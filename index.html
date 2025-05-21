@@ -1,10 +1,319 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My GitHub Pages Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifyChain - Cryptocurrency Ownership Verification</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <p>This is zkp dynamics.</p>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-shield-alt"></i></span>
+                <span class="logo-text">VerifyChain</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Log In</button>
+                <button class="btn btn-primary">Connect Wallet</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Verify Cryptocurrency Ownership with Confidence</h1>
+            <p>Secure, tamper-proof ownership verification powered by blockchain technology</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large">Get Started <i class="fas fa-arrow-right"></i></button>
+                <button class="btn btn-ghost btn-large">Watch Demo <i class="fas fa-play"></i></button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Verification Accuracy</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100K+</span>
+                    <span class="stat-label">Verifications Monthly</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Supported Chains</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-graphic"></div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Key Features</h2>
+            <p>Advanced tools for seamless cryptocurrency verification</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-fingerprint"></i></div>
+                <h3>Real-time Verification</h3>
+                <p>Instantly verify cryptocurrency ownership across multiple blockchains with a single click.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                <h3>Enhanced Security</h3>
+                <p>Zero-knowledge proofs ensure your private keys remain secure during verification processes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+                <h3>Smart Contracts</h3>
+                <p>Automated verification using custom smart contracts with tamper-proof records.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Portfolio Analytics</h3>
+                <p>Get comprehensive insights into verified assets with real-time market data.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                <h3>Cross-chain Support</h3>
+                <p>Seamlessly verify assets across Bitcoin, Ethereum, Solana, and 47+ other blockchains.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-code"></i></div>
+                <h3>Developer API</h3>
+                <p>Integrate our verification services directly into your applications with our robust API.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Simple, secure, and efficient verification in three steps</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Connect Your Wallet</h3>
+                    <p>Securely connect your cryptocurrency wallet through our non-custodial interface.</p>
+                </div>
+                <div class="step-image step-image-1"></div>
+            </div>
+            <div class="step reverse">
+                <div class="step-image step-image-2"></div>
+                <div class="step-content">
+                    <h3>Generate Verification Proof</h3>
+                    <p>Our system creates a cryptographic proof of ownership without exposing your private keys.</p>
+                </div>
+                <div class="step-number">2</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Receive Verification Certificate</h3>
+                    <p>Get a tamper-proof verification certificate stored on-chain for future reference.</p>
+                </div>
+                <div class="step-image step-image-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo">
+        <div class="demo-container">
+            <div class="demo-form">
+                <h2>Try It Now</h2>
+                <p>See how our verification works with this interactive demo</p>
+                <div class="input-group">
+                    <label for="wallet-address">Enter wallet address</label>
+                    <input type="text" id="wallet-address" placeholder="0x..." />
+                </div>
+                <div class="input-group">
+                    <label for="asset-type">Select asset type</label>
+                    <select id="asset-type">
+                        <option value="btc">Bitcoin (BTC)</option>
+                        <option value="eth">Ethereum (ETH)</option>
+                        <option value="sol">Solana (SOL)</option>
+                        <option value="nft">NFT Collection</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary btn-full">Verify Ownership</button>
+                <div class="verification-result">
+                    <div class="result-icon"><i class="fas fa-spinner fa-spin"></i></div>
+                    <p>Enter a wallet address to see verification results</p>
+                </div>
+            </div>
+            <div class="demo-animation">
+                <div class="blockchain-animation"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="section-header">
+            <h2>Pricing Plans</h2>
+            <p>Flexible options for businesses and individuals</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Basic</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> 10 verifications per month</li>
+                    <li><i class="fas fa-check"></i> Standard verification certificate</li>
+                    <li><i class="fas fa-check"></i> 3 blockchain networks</li>
+                    <li><i class="fas fa-check"></i> Basic support</li>
+                    <li class="feature-disabled"><i class="fas fa-times"></i> API access</li>
+                    <li class="feature-disabled"><i class="fas fa-times"></i> Custom integration</li>
+                </ul>
+                <button class="btn btn-secondary btn-full">Get Started</button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-header">
+                    <div class="featured-tag">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">49</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> 100 verifications per month</li>
+                    <li><i class="fas fa-check"></i> Premium verification certificate</li>
+                    <li><i class="fas fa-check"></i> 25 blockchain networks</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                    <li><i class="fas fa-check"></i> Basic API access</li>
+                    <li class="feature-disabled"><i class="fas fa-times"></i> Custom integration</li>
+                </ul>
+                <button class="btn btn-primary btn-full">Get Started</button>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">199</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Unlimited verifications</li>
+                    <li><i class="fas fa-check"></i> Custom verification certificate</li>
+                    <li><i class="fas fa-check"></i> All blockchain networks</li>
+                    <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                    <li><i class="fas fa-check"></i> Full API access</li>
+                    <li><i class="fas fa-check"></i> Custom integration</li>
+                </ul>
+                <button class="btn btn-secondary btn-full">Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to verify with confidence?</h2>
+            <p>Join thousands of companies and individuals who trust VerifyChain for cryptocurrency ownership verification.</p>
+            <button class="btn btn-primary btn-large">Get Started Today</button>
+        </div>
+        <div class="trusted-by">
+            <p>Trusted by:</p>
+            <div class="logo-grid">
+                <div class="partner-logo"></div>
+                <div class="partner-logo"></div>
+                <div class="partner-logo"></div>
+                <div class="partner-logo"></div>
+                <div class="partner-logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-shield-alt"></i></span>
+                    <span class="logo-text">VerifyChain</span>
+                </div>
+                <p>Secure cryptocurrency ownership verification powered by blockchain technology.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Changelog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2025 VerifyChain. All rights reserved.
+            </div>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
