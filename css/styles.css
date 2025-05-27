@@ -182,6 +182,13 @@ nav {
     flex-shrink: 0;
 }
 
+.logo .heptadecagon,
+.footer-logo .heptadecagon {
+    overflow: hidden;
+    position: relative;
+}
+
+
 .logo .heptadecagon {
     width: 10%;
     height: 10%;
