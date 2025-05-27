@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .logo-container {
+            width: 300px;
+            height: 100px;
+            position: relative;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .symbol {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            margin-right: 15px;
+        }
+
+        .heptadecagon {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .line {
+            position: absolute;
+            background: #00ff9d;
+            height: 2px;
+            transform-origin: left center;
+            box-shadow: 0 0 5px #00ff9d;
+            opacity: 0.8;
+        }
+
+        .inner-line {
+            position: absolute;
+            background: #00ff9d;
+            height: 1px;
+            transform-origin: left center;
+            opacity: 0.3;
+        }
+
+        .text-container {
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .company-name {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            background: linear-gradient(45deg, #fff, #00ff9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #888;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="symbol">
+            <div class="heptadecagon" id="heptadecagon"></div>
+        </div>
+        <div class="text-container">
+            <div class="company-name">ZKP Dynamics</div>
+            <div class="tagline">Zero-Knowledge Proof Solutions</div>
+        </div>
+    </div>
+
+    <script>
+        function createHeptadecagon() {
+            const container = document.getElementById('heptadecagon');
+            const centerX = 40;
+            const centerY = 40;
+            const radius = 35;
+            const innerRadius = 20;
+            const sides = 17;
+
+            // Create outer heptadecagon
+            for (let i = 0; i < sides; i++) {
+                const angle = (i * 2 * Math.PI) / sides;
+                const nextAngle = ((i + 1) * 2 * Math.PI) / sides;
+                
+                const x1 = centerX + radius * Math.cos(angle);
+                const y1 = centerY + radius * Math.sin(angle);
+                const x2 = centerX + radius * Math.cos(nextAngle);
+                const y2 = centerY + radius * Math.sin(nextAngle);
+
+                const line = document.createElement('div');
+                line.className = 'line';
+                
+                const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                const angleDeg = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+                
+                line.style.width = `${length}px`;
+                line.style.left = `${x1}px`;
+                line.style.top = `${y1}px`;
+                line.style.transform = `rotate(${angleDeg}deg)`;
+                
+                container.appendChild(line);
+
+                // Create inner lines
+                const innerX = centerX + innerRadius * Math.cos(angle);
+                const innerY = centerY + innerRadius * Math.sin(angle);
+                
+                const innerLine = document.createElement('div');
+                innerLine.className = 'inner-line';
+                
+                const innerLength = Math.sqrt(Math.pow(x1 - innerX, 2) + Math.pow(y1 - innerY, 2));
+                const innerAngleDeg = Math.atan2(y1 - innerY, x1 - innerX) * 180 / Math.PI;
+                
+                innerLine.style.width = `${innerLength}px`;
+                innerLine.style.left = `${innerX}px`;
+                innerLine.style.top = `${innerY}px`;
+                innerLine.style.transform = `rotate(${innerAngleDeg}deg)`;
+                
+                container.appendChild(innerLine);
+            }
+        }
+
+        createHeptadecagon();
+    </script>
+</body>
+</html>
