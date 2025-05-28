@@ -435,6 +435,18 @@ nav {
     box-shadow: none !important;
 }
 
+.step-centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    float: none;
+}
+
+/* Optionally, make sure .step-content is not restricted in width for centering */
+.step-content.step-centered {
+    max-width: 600px;
+}
+
 /* Demo Section */
 .demo {
     background: var(--gradient-dark);
