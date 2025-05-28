@@ -396,7 +396,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 0.1rem;
 }
 
 .step.reverse {
@@ -404,18 +404,7 @@ nav {
 }
 
 .step-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: #111 !important;
-    color: var(--primary-color) !important;
-    border: 1.5px solid var(--primary-color);
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.2rem;
 }
 
 .step-content {
@@ -844,8 +833,7 @@ footer {
     }
 
     .step {
-        flex-direction: column;
-        gap: 0.4rem;
+        gap: 0.1rem;
     }
 
     .step.reverse {
